@@ -52,7 +52,7 @@ def move_santa(current_position):
 houses = { "0,0":1 } # why a dictionary? because I wanted to find out which
                      # house got most presents. That lucky guy...
 current_position_of_santa = (0, 0)
-current_position_of_robo_santa = (0,0)
+current_position_of_robo_santa = (0, 0)
 
 for move in MOVEMENT[1::2]:
     current_position_of_santa = move_santa(current_position_of_santa)
