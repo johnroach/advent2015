@@ -42,14 +42,13 @@ def move_santa(current_position):
         new_position = (x+1, y)
     elif move == "<":
         new_position = (x-1, y)
-    new_key = str(new_position[0]) + "," + str(new_position[1])
-    if new_key in houses:
-        houses[new_key] += 1
+    if new_position in houses:
+        houses[new_position] += 1
     else:
-        houses[new_key] = 1
+        houses[new_position] = 1
     return new_position
 
-houses = { "0,0":1 } # why a dictionary? because I wanted to find out which
+houses = { (0, 0):1 } # why a dictionary? because I wanted to find out which
                      # house got most presents. That lucky guy...
 current_position_of_santa = (0, 0)
 current_position_of_robo_santa = (0, 0)
